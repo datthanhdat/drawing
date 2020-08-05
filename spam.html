@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, laboriosam saepe, ex reprehenderit nulla excepturi natus animi modi impedit necessitatibus itaque suscipit dignissimos deleniti magnam totam voluptates et qui dolores.</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fuga quas vel obcaecati dolorem labore, veniam ex reprehenderit excepturi, natus nemo eveniet, autem itaque. Consequatur magni veritatis explicabo illum porro.</p>
+            </div>
+        </div>
+        <button class="button" onclick="show()"><i class="fa fa-moon-o" aria-hidden="true"></i></button>
+        <button class="button" onclick="show()"><i class="fa fa-sun-o" aria-hidden="true"></i></button>
+    </div>
+</body>
+</html>
+<style>
+.container{
+    text-align: center;
+}
+
+.dark-theme{
+    color: white;
+    background: black;
+    transition: 0.4s;
+}
+.fa{
+    font-size: 20px;
+}
+.button{
+    padding: 8px 18px;
+    background: white;
+    border: transparent solid 1px;
+    border-radius: 5px;
+}
+</style>
+<script>
+function show() {
+    var element = document.body;
+    element.classList.toggle('dark-theme')
+}
+</script>
