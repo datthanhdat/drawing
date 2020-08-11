@@ -6,13 +6,11 @@ var canva = document.getElementById("canvas");
 
 const context = canva.getContext("2d");
 
-// Set defaults
 paint.activeTool = Tool.TOOL_LINE;
 paint.lineWidth = "1";
 paint.brushSize = "4";
 paint.selectedColor = "#000000";
 
-// initialize paint
 paint.init();
 
 document.querySelectorAll("[data-command]").forEach((el) => {

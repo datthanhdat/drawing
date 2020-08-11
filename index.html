@@ -8,9 +8,10 @@
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-    <link rel="stylesheet" href="Css/totop.css">
+    <link rel="stylesheet" href="Css/totop1.css">
     <link rel="stylesheet" href="./Css/menu.css" />
     <link rel="stylesheet" href="Css/home.css" />
+    <link rel="stylesheet" href="Css/popup.css">
     <link rel="stylesheet" href="./Css/dark-theme.css">
     <link rel="icon" type="image/ico" href="img/logo.jpg" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"/>
@@ -293,13 +294,13 @@
           <p></p>
           <span><hr /></span>
           <p></p>
-          <label for=""
-            ><p>
+          <label for="">
+            <p>
               Ready to start your next project with us? Give us a call or send
               us an email and we will get <br />
               back to you as soon as possible!
-            </p></label
-          >
+            </p>
+          </label>
         </div>
       </div>
       <div class="row icon">
@@ -330,11 +331,17 @@
       </div>
     </div>
 <!-- Tạo nút click top -->
-  <div class="nuttop"><i class="fa fa-level-up top" aria-hidden="true"></i></div>
+  <div class="nuttop"><div class="wrapper">
+    
+    <a href="#xmas-popup" class="button"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+  </div></div>
+  <div id="xmas-popup" class="popup" href="#">
+    <div class="popup-content">
+          <div class="fb-comments" data-href="http://localhost/AloDraw-master/" data-numposts="10"></div>
+        <a href="#" class="close">x</a>
+    </div>
+</div>
   <div class="nutduoi"><i onclick="theme()" class="fa fa-lightbulb-o" aria-hidden="true"></i></div>
-
-
-  
   <script src="./jquey/totop.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <script src="./Js/line.js"></script>
@@ -342,3 +349,12 @@
   <script src="Js/dark-theme.js"></script>
   </body>
 </html>
+
+<script>
+  (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=926568574493634";
+          fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));
+</script>

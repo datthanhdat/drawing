@@ -7,7 +7,6 @@ export default class Fill {
       
         this.fillStack = [];
 
-        // read the pixels in the canvas
         this.imageData = this.context.getImageData(0, 0, this.context.canvas.width, this.context.canvas.height);
 
         console.log(this.imageData);
@@ -20,7 +19,7 @@ export default class Fill {
     getPixel(x, y) {
         
         if (x < 0 || y < 0 || x >= this.imageData.width || y >= this.imageData.height) {
-            return [-1, -1, -1, -1];  // impossible color
+            return [-1, -1, -1, -1]; 
         } else {
             
             const offset = (y * this.imageData.width + x) * 4;
@@ -50,13 +49,11 @@ export default class Fill {
     }
 
     floodFill(x, y, fillColor) {
-        // get the color we're filling
         const targetColor = this.getPixel(x, y);
 
         console.log(targetColor);
         console.log(fillColor);
        
-        // check we are actually filling a different color
         if (!this.colorsMatch(targetColor, fillColor)) {
             //console.log(targetColor);
             //console.log(fillColor);
@@ -66,7 +63,6 @@ export default class Fill {
             
             this.fillPixel(x, y, targetColor, fillColor);
             this.fillCol();
-            // put the data back
             
         }
     }
